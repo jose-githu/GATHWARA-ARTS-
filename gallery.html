@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Gathwara Arts</title>
+  <meta name="description" content="Browse the full portfolio of Gathwara Arts — portraits, landscapes, abstracts, and private commissions." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────── -->
+  <nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">GATHWARA <span>ARTS</span></a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="gallery.html"  class="nav__link active">Gallery</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+      </ul>
+      <a href="#"
+         class="btn btn-primary nav__cta"
+         data-wa="Hello, I'd like to enquire about commissioning a piece from Gathwara Arts.">
+        Commission
+      </a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+    <ul role="list">
+      <li><a href="index.html"    class="nav__link">Home</a></li>
+      <li><a href="gallery.html"  class="nav__link">Gallery</a></li>
+      <li><a href="services.html" class="nav__link">Services</a></li>
+    </ul>
+  </div>
+
+  <!-- ── PAGE HERO ─────────────────────────────────────── -->
+  <section class="page-hero" aria-labelledby="gallery-title">
+    <div class="container">
+      <p class="section-label" style="justify-content:center">The Collection</p>
+      <h1 class="page-hero__title" id="gallery-title">
+        Works That <em>Speak</em><br>Without Words
+      </h1>
+      <p class="page-hero__sub">
+        Original visual assets documenting the timeless traditions, landscapes, and deep cultural histories 
+        of the Maasai, Kamba, and Kikuyu peoples—crafted to complete your exhibition and artwork displays.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ───────────────────────────────────────── -->
+  <main>
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="gallery-filters" role="group" aria-label="Filter artworks">
+        <button class="filter-btn active" data-filter="all">All Works</button>
+        <button class="filter-btn" data-filter="portrait">Portrait</button>
+        <button class="filter-btn" data-filter="landscape">Landscape</button>
+        <button class="filter-btn" data-filter="abstract">Abstract</button>
+      </div>
+
+      <!-- Masonry Grid — populated by script.js -->
+      <div class="masonry-grid" id="masonryGrid" role="list" aria-label="Artwork gallery"></div>
+
+      <!-- Load More -->
+      <div class="gallery-load-more">
+        <button id="loadMoreBtn" class="btn btn-outline">
+          Load More Works
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── LIGHTBOX ──────────────────────────────────────── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox__close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lightbox__nav lightbox__prev" id="lbPrev" aria-label="Previous">&#8592;</button>
+    <img class="lightbox__img" id="lbImg" src="" alt="" />
+    <button class="lightbox__nav lightbox__next" id="lbNext" aria-label="Next">&#8594;</button>
+    <div class="lightbox__counter" id="lbCount" aria-live="polite"></div>
+  </div>
+
+  <!-- ── CTA ───────────────────────────────────────────── -->
+  <section class="cta-banner" style="margin-top:4rem" aria-label="Exhibition display inquiry">
+    <div class="container">
+      <h2 class="cta-banner__title" style="font-size:clamp(1.8rem,3.5vw,3rem)">
+        Need Authentic Pieces for your <em>Exhibition Display?</em>
+      </h2>
+      <p class="cta-banner__sub">Collaborate with us to anchor your upcoming event or cultural showcase with dedicated local craftsmanship.</p>
+      <div class="cta-banner__actions">
+        <a href="#"
+           class="btn btn-primary"
+           data-wa-service="exhibitions"
+           data-wa="Hello, I would like to enquire about featuring visual assets and exhibition displays from Gathwara Arts at an upcoming event.">
+          Request Exhibition Assets
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- ── FOOTER ────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">GATHWARA <span>ARTS</span></a>
+          <p style="margin-top:1rem">
+            Fine art studio deeply rooted in the preservation of Kenyan heritage. 
+            Providing authentic visual assets, cultural exhibition displays, and 
+            community mentorship—delivered with dedicated local craftsmanship.
+          </p>
+        </div>
+        <div>
+          <p class="footer__heading">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Services</p>
+          <ul class="footer__links">
+            <li><a href="services.html">Real-Time Rendering</a></li>
+            <li><a href="services.html">Exhibition Displays</a></li>
+            <li><a href="services.html">Master Mentorship</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Contact</p>
+          <ul class="footer__links">
+            <li>
+              <a href="#"
+                 data-wa="Hello, I'd like to connect with Gathwara Arts.">
+                WhatsApp: +254 714 817 516
+              </a>
+            </li>
+            <li><a href="mailto:info@gathwaraarts.com">info@gathwaraarts.com</a></li>
+            <li><span style="color:#444">Kimana, Kajiado County</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+  <span>&copy; 2026 Gathwara Arts. All rights reserved.</span>
+  <span>Crafted with precision in Kimana.</span>
+</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
